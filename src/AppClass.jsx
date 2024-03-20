@@ -26,5 +26,4 @@ export default class AppClass extends Component{
     return data;
   }
 
-  // code here
 }

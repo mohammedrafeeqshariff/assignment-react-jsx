@@ -24,7 +24,6 @@ const imageData = ()=>{
 }
 
 function App() {
-  // code here
   let data = [
     {
       id:1,
