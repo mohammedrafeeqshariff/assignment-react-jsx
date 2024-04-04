@@ -1,64 +1,18 @@
+import React from 'react';
 import './App.css';
-import elephant from "./images/elephant.jpeg";
+import DataComponent from './Components/DataComponent';
 
-const imageData = ()=>{
-  let data = [
-    {
-      id:1,
-      img:elephant
-    },
-    {
-      id:2,
-      img:elephant
-    },
-    {
-      id:3,
-      img:elephant
-    },
-    {
-      id:4,
-      img:elephant
-    }
-  ]
-  return data;
-}
+export default function App() {
+  const images = DataComponent();
 
-function App() {
-  let data = [
-    {
-      id:1,
-      img:elephant
-    },
-    {
-      id:2,
-      img:elephant
-    },
-    {
-      id:3,
-      img:elephant
-    },
-    {
-      id:4,
-      img:elephant
-    }
-  ]
-
-  return(
+  return (
     <>
-
-    <div className='kg'>
-      <h1>Kalvium gallery</h1>
-    </div>
-
-    <div className='images'>
-      {
-        data.map((ele)=>{
-          return <img src={ele.img} alt="elephant image"/>
-        })
-      }
-    </div>
+      <p><strong>Function Component</strong></p>
+      <div className="image-container">
+        {images.map((ele) => (
+          <img src={ele.img} alt="elephant-images" key={ele.id} />
+        ))}
+      </div>
     </>
-  )
+  );
 }
-
-export default App;
